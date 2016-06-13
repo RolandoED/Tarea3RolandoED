@@ -32,92 +32,92 @@ namespace CA3Tarea3
         /// //MAIN
         /// </summary>
 
-        static void Main()
-        {
-        reiniciar:
-            Console.WriteLine("Ingrese el límite máximo de estudiantes");
-            max_studiantes = int.Parse(Console.ReadLine());
-            //max_studiantes = 9;
-            if (max_studiantes < 6)
-            {
-                Console.WriteLine("Error");
-                Console.ReadLine();
-                goto reiniciar;
-            }
-            Console.WriteLine("Limite de Estudiantes es: {0}", max_studiantes);
-            Console.ReadKey();
-            while (opcion != 7)
-            {
-                Console.Clear();
-                Console.WriteLine(_menu);
-                opcion = int.Parse(Console.ReadLine());
-                switch (opcion)
-                {
-                    case 1:
-                        {
-                            AgregarEstudiante();
-                            Console.ReadKey();
-                            break;
-                        }
-                    case 2:
-                        {
-                            Console.WriteLine("Ingrese el ID del estudiante a modificar: ");
-                            int idsend = int.Parse(Console.ReadLine());
-                            ModifEstudiante(idsend);
-                            //printArray();
-                            break;
-                        }
-                    case 3:
-                        {
-                            Console.WriteLine("Ingrese el ID a eliminar: ");
-                            int idsend = int.Parse(Console.ReadLine());
-                            EliminarEstudiante(idsend);
-                            break;
-                        }
-                    case 4:
-                        {
-                            Console.WriteLine("Ingrese el ID a buscar: ");
-                            int idsend = int.Parse(Console.ReadLine());
-                            BuscarEstudiante(idsend);
-                            break;
-                        }
-                    case 5:
-                        {
-                            ListarEstudiantes();
-                            break;
-                        }
-                    case 6:
-                        {
-                            ListarClasificativo();
-                            break;
-                        }
-                    case 7:
-                        {
-                            Console.WriteLine("Desea salir S / N");
-                            string decision = Console.ReadLine();
-                            if (decision.Equals("N") || decision.Equals("n"))
-                            {
-                                opcion = 0;
-                            }
-                            break;
-                        }
-                    case 8:
-                        {
-                            fillWithDummyData();
-                            //opcion = 0;
-                            Console.ReadKey();
-                            break;
-                        }
-                    default:
-                        {
-                            Console.WriteLine("Seleccione inválida..");
-                            Console.ReadKey();
-                            Console.Clear();
-                            break;
-                        }
-                }
-            }
-        }
+        //static void Main()
+        //{
+        //reiniciar:
+        //    Console.WriteLine("Ingrese el límite máximo de estudiantes");
+        //    max_studiantes = int.Parse(Console.ReadLine());
+        //    //max_studiantes = 9;
+        //    if (max_studiantes < 6)
+        //    {
+        //        Console.WriteLine("Error");
+        //        Console.ReadLine();
+        //        goto reiniciar;
+        //    }
+        //    Console.WriteLine("Limite de Estudiantes es: {0}", max_studiantes);
+        //    Console.ReadKey();
+        //    while (opcion != 7)
+        //    {
+        //        Console.Clear();
+        //        Console.WriteLine(_menu);
+        //        opcion = int.Parse(Console.ReadLine());
+        //        switch (opcion)
+        //        {
+        //            case 1:
+        //                {
+        //                    AgregarEstudiante();
+        //                    Console.ReadKey();
+        //                    break;
+        //                }
+        //            case 2:
+        //                {
+        //                    Console.WriteLine("Ingrese el ID del estudiante a modificar: ");
+        //                    int idsend = int.Parse(Console.ReadLine());
+        //                    ModifEstudiante(idsend);
+        //                    //printArray();
+        //                    break;
+        //                }
+        //            case 3:
+        //                {
+        //                    Console.WriteLine("Ingrese el ID a eliminar: ");
+        //                    int idsend = int.Parse(Console.ReadLine());
+        //                    EliminarEstudiante(idsend);
+        //                    break;
+        //                }
+        //            case 4:
+        //                {
+        //                    Console.WriteLine("Ingrese el ID a buscar: ");
+        //                    int idsend = int.Parse(Console.ReadLine());
+        //                    BuscarEstudiante(idsend);
+        //                    break;
+        //                }
+        //            case 5:
+        //                {
+        //                    ListarEstudiantes();
+        //                    break;
+        //                }
+        //            case 6:
+        //                {
+        //                    ListarClasificativo();
+        //                    break;
+        //                }
+        //            case 7:
+        //                {
+        //                    Console.WriteLine("Desea salir S / N");
+        //                    string decision = Console.ReadLine();
+        //                    if (decision.Equals("N") || decision.Equals("n"))
+        //                    {
+        //                        opcion = 0;
+        //                    }
+        //                    break;
+        //                }
+        //            case 8:
+        //                {
+        //                    fillWithDummyData();
+        //                    //opcion = 0;
+        //                    Console.ReadKey();
+        //                    break;
+        //                }
+        //            default:
+        //                {
+        //                    Console.WriteLine("Seleccione inválida..");
+        //                    Console.ReadKey();
+        //                    Console.Clear();
+        //                    break;
+        //                }
+        //        }
+        //    }
+        //}
 
         private static void fillWithDummyData()
         {

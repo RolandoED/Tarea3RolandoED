@@ -16,3 +16,9 @@ C:\Users\Rolando\Desktop\tarea 3 enviar\CA3Tarea3\CA3Tarea3\obj\Debug\CA3Tarea3.
 C:\Users\Rolando\Desktop\tarea 3 enviar\CA3Tarea3\CA3Tarea3\bin\Debug\CA3Tarea3.exe
 C:\Users\Rolando\Desktop\tarea 3 enviar\CA3Tarea3\CA3Tarea3\bin\Debug\CA3Tarea3.pdb
 C:\Users\Rolando\Desktop\tarea 3 enviar\CA3Tarea3\CA3Tarea3\obj\Debug\CA3Tarea3.csprojResolveAssemblyReference.cache
+C:\Users\Rolando\Desktop\colleccion\tarea 3 enviar\CA3Tarea3\CA3Tarea3\bin\Debug\CA3Tarea3.exe.config
+C:\Users\Rolando\Desktop\colleccion\tarea 3 enviar\CA3Tarea3\CA3Tarea3\obj\Debug\CA3Tarea3.exe
+C:\Users\Rolando\Desktop\colleccion\tarea 3 enviar\CA3Tarea3\CA3Tarea3\obj\Debug\CA3Tarea3.pdb
+C:\Users\Rolando\Desktop\colleccion\tarea 3 enviar\CA3Tarea3\CA3Tarea3\bin\Debug\CA3Tarea3.exe
+C:\Users\Rolando\Desktop\colleccion\tarea 3 enviar\CA3Tarea3\CA3Tarea3\bin\Debug\CA3Tarea3.pdb
+C:\Users\Rolando\Desktop\colleccion\tarea 3 enviar\CA3Tarea3\CA3Tarea3\obj\Debug\CA3Tarea3.csprojResolveAssemblyReference.cache

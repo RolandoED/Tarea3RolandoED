@@ -22,8 +22,8 @@ namespace CA3Tarea3
         { "12", "2", "4", "10", "5", "7", "13", "21", "16", "30" });
         static List<String> hexadecimales = new List<String>(new string[] 
         { "9", "1A", "B", "C", "A", "7", "3", "5", "10", "0" });
-        // default 10 sec
-        static int tiempoparacontestar = 5000;
+        // default 30 sec
+        static int tiempoparacontestar = 30000;
         static bool gano = false;
         static bool perdio1 ;
         static bool perdio2 ;
@@ -34,73 +34,73 @@ namespace CA3Tarea3
         static int juego2 = 0;
         static int currentLevel = 0;
 
-        //public static void Main()
-        //{
-        //    while (opcion != 4)
-        //    {
-        //        Console.Clear();
-        //        int tot = juego2 + juego1;
-        //        if (juego1 + 1 >= 8 && juego1 + 1 >= 8)
-        //        {
-        //            Console.WriteLine("GANO EL JUEGO!!!");
-        //            Console.WriteLine("Obtuvo suficientes puntos");
-        //            //show_current_score();
-        //            //Environment.Exit(0);
-        //            Console.Clear();
-        //        }
-        //        Console.WriteLine(_menu);
-        //        opcion = int.Parse(Console.ReadLine());
-        //        switch (opcion)
-        //        {
-        //            case 1:
-        //                {
-        //                    if (juego1 < 10)                            
-        //                        jugarBinOct_OctBin();                                                            
-        //                    else
-        //                    {
-        //                        Console.WriteLine("No se puede jugar mas la opcion 1\nYa se llegó al maximo posible");
-        //                        Console.ReadLine();
-        //                    }
-        //                    break;
-        //                }
-        //            case 2:
-        //                {
-        //                    if (juego2 < 10)                            
-        //                        jugarBinHex_HexBin();                            
-        //                    else
-        //                    {
-        //                        Console.WriteLine("No se puede jugar mas la opcion 2\nYa se llegó al maximo posible");
-        //                        Console.ReadLine();
-        //                    }
-        //                    break;
-        //                }
-        //            case 3:
-        //                {
-        //                    show_current_score();     
-        //                    break;
-        //                }
-        //            #region
-        //            case 4:
-        //                {
-        //                    Console.WriteLine("Desea salir S(any key) / N");
-        //                    string decision = Console.ReadLine();
-        //                    if (decision.Equals("N") || decision.Equals("n"))
-        //                    {
-        //                        opcion = 0;
-        //                    }
-        //                    break;
-        //                }
-        //            default:
-        //                {
-        //                    Console.WriteLine("Seleccione inválida..");
-        //                    Console.ReadKey();
-        //                    Console.Clear();
-        //                    break;
-        //                }
-        //            #endregion
-        //        }
-        //    }
-        //}
+        public static void Main()
+        {
+            while (opcion != 4)
+            {
+                Console.Clear();
+                int tot = juego2 + juego1;
+                if (juego1 + 1 >= 8 && juego1 + 1 >= 8)
+                {
+                    Console.WriteLine("GANO EL JUEGO!!!");
+                    Console.WriteLine("Obtuvo suficientes puntos");
+                    //show_current_score();
+                    //Environment.Exit(0);
+                    Console.Clear();
+                }
+                Console.WriteLine(_menu);
+                opcion = int.Parse(Console.ReadLine());
+                switch (opcion)
+                {
+                    case 1:
+                        {
+                            if (juego1 < 10)
+                                jugarBinOct_OctBin();
+                            else
+                            {
+                                Console.WriteLine("No se puede jugar mas la opcion 1\nYa se llegó al maximo posible");
+                                Console.ReadLine();
+                            }
+                            break;
+                        }
+                    case 2:
+                        {
+                            if (juego2 < 10)
+                                jugarBinHex_HexBin();
+                            else
+                            {
+                                Console.WriteLine("No se puede jugar mas la opcion 2\nYa se llegó al maximo posible");
+                                Console.ReadLine();
+                            }
+                            break;
+                        }
+                    case 3:
+                        {
+                            show_current_score();
+                            break;
+                        }
+                    #region
+                    case 4:
+                        {
+                            Console.WriteLine("Desea salir S(any key) / N");
+                            string decision = Console.ReadLine();
+                            if (decision.Equals("N") || decision.Equals("n"))
+                            {
+                                opcion = 0;
+                            }
+                            break;
+                        }
+                    default:
+                        {
+                            Console.WriteLine("Seleccione inválida..");
+                            Console.ReadKey();
+                            Console.Clear();
+                            break;
+                        }
+                    #endregion
+                }
+            }
+        }
 
 
         static void jugarBinOct_OctBin()
@@ -168,11 +168,9 @@ namespace CA3Tarea3
             aTimer.Enabled = true;
             perdio2 = false;
             string binary = "";
-            int binaryint = 0;
-            string integer = "";
+            int binaryint = 0;            
             Console.WriteLine("Tiene 10 segundos para contestar");
-            Console.WriteLine("Cuanto es -{0}- Binario en Hex ", binarios[juego2]);
-            //Console.WriteLine("Cuanto es -{0}- Binario en Hex ", binarios[juego2]);
+            Console.WriteLine("Cuanto es -{0}- Binario en Hex ", binarios[juego2]);            
             binaryint = Convert.ToInt32(binarios[juego2], 2);
             do
             {
@@ -181,10 +179,7 @@ namespace CA3Tarea3
                 string check = Convert.ToString(binaryint,16);
                 //int a =  Convert.ToInt32(binary, 16);
                 int errorCounter = Regex.Matches(binary, @"[a-zA-Z]").Count;
-                //Check as strings
-                //if (errorCounter!= 0)
-                //{
-                    if (check.ToLower().Equals(check.ToLower()))
+                    if (check.ToLower().Equals(binary.ToLower()))
                     {
                         gano = true;
                         aTimer.Enabled = false;
@@ -197,25 +192,6 @@ namespace CA3Tarea3
                         aTimer.Dispose();
                         goto sal2;
                     }                    
-                //}
-                //Check as numbers
-                //else
-                //{
-                //    if (check.ToLower().Equals(check.ToLower()))
-                //    {
-                //        gano = true;
-                //        aTimer.Enabled = false;
-                //        aTimer.Dispose();
-                //    }
-                //    else if (perdio2)
-                //    {
-                //        Console.WriteLine("Se agotó el tiempo!");
-                //        aTimer.Enabled = false;
-                //        aTimer.Dispose();
-                //        goto sal2;
-                //    } 
-                //}
-
             }
             while (!gano && !perdio2);
         sal2:
